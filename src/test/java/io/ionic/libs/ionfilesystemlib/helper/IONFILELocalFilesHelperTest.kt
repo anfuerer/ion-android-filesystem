@@ -693,7 +693,7 @@ class IONFILELocalFilesHelperTest : IONFILEBaseJUnitTest() {
             fullPath = path,
             options = IONFILEReadOptions(
                 encoding = IONFILEEncoding.WithCharset(Charsets.UTF_8),
-                offset = content.length
+                offset = content.length.toLong()
             )
         )
 
@@ -719,7 +719,7 @@ class IONFILELocalFilesHelperTest : IONFILEBaseJUnitTest() {
             fullPath = path,
             options = IONFILEReadInChunksOptions(
                 encoding = IONFILEEncoding.WithCharset(Charsets.UTF_8),
-                offset = content.length + 100,
+                offset = (content.length + 100).toLong(),
                 chunkSize = 10
             )
         ).test {
