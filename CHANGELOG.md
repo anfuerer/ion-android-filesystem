@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.0]
 
+### 2026-03-10
+
+- Fix: Change `offset` parameter type from `Int` to `Long` in `IONFILEReadOptions` and `IONFILEReadInChunksOptions` to support files larger than 2.14GB.
+
 ### 2025-12-31
 
 - Feature: Add optional `length` and `offset` parameters to `readFile` and `readFileInChunks`.
